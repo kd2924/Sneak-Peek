@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneak-Peek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>Sneak-Peek</header>
+    <p>Track sneaker trends and decide when to hold or sell!</p>
+    <div class="search">
+      <input type="text" id="skuInput" placeholder="Enter SKU (e.g., DM7866-001)">
+      <button id="searchButton">Search</button>
+    </div>
+    <h2 id="sneakerName">Sneaker Not Found</h2>
+    <img id="sneakerImage" src="default_image.png" alt="Sneaker Image">
+    <div class="details">
+      <p>Retail Price: <span id="retailPrice">N/A</span></p>
+      <p>Lowest Ask: <span id="lowestAsk">N/A</span></p>
+      <p>Highest Bid: <span id="highestBid">N/A</span></p>
+      <p>Sales Last 72 Hours: <span id="salesLast72">N/A</span></p>
+      <p>Deadstock Sold: <span id="deadstockSold">N/A</span></p>
+      <p>Release Date: <span id="releaseDate">N/A</span></p>
+    </div>
+    <div class="recommendation" id="recommendation">Recommendation: Not enough data</div>
+    <footer>© 2024 Sneak-Peek</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

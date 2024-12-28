@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Raleway:wght@400;600&display=swap');
+
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #c1dffb, #a3d8f4, #82cbee, #63b8e5);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1565c0;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #90caf9;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  width: 70%;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.search input:focus {
+  border-color: #1e88e5;
+}
+
+.search button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: #1e88e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.search button:hover {
+  background: #0d47a1;
+  transform: scale(1.05);
+}
+
+#sneakerImage {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#sneakerImage:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.details p {
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.details span {
+  font-weight: 600;
+  color: #1e88e5;
+}
+
+.recommendation {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.recommendation.sell {
+  background: #f8d7da;
+  color: #a71d2a;
+  border: 1px solid #f5c2c7;
+}
+
+.recommendation.monitor {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.recommendation.hold {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #888;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  header {
+    font-size: 28px;
+  }
+
+  .details {
+    font-size: 15px;
+  }
+
+  #sneakerImage {
+    width: 100%;
+  }
+}
