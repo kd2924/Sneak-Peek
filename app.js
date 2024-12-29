@@ -1,7 +1,6 @@
 async function searchSneakers() {
   const sku = document.getElementById('skuInput').value.trim();
-  const baseUrl = 'https://sneak-peek-seven.vercel.app/';
-
+  const baseUrl = '/api/sneakers';
   if (!sku) {
     alert('Please enter a valid SKU!');
     return;
