@@ -1,18 +1,21 @@
 const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
+const path = require('path');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
 
+// Middleware
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static frontend files
 
 // Root route for testing
 app.get('/', (req, res) => {
-    res.send('Sneaker Backend is Running');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Sneaker search by URL route
+// API route for sneaker search
 app.get('/api/sneakers', async (req, res) => {
     const { sku } = req.query;
 
@@ -40,8 +43,7 @@ app.get('/api/sneakers', async (req, res) => {
     }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
 });
-        
